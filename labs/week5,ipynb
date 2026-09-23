@@ -1,0 +1,198 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# CIS 536/736 - Week 5 / Module 4: Procedural Textures & Shader Graph\n",
+    "### Lab 2b & MP 3 Preparation\n",
+    "\n",
+    "**Objective:** In this notebook, we bridge the gap between procedural shader theory and engine application. You will prepare your Unity 6 HDRP environment, validate your OpenUSD stage meshes, and generate the C# wrapper scripts required to drive your Shader Graph Blackboard parameters dynamically for Machine Problem 3 (MP 3).\n",
+    "\n",
+    "**Core Concepts Covered:**\n",
+    "- Escaping 2D UV mapping via Procedural Noise (Voronoi/Perlin) and Triplanar Projection.\n",
+    "- Modifying the Fragment Context (Emission/Color) and Vertex Context (Displacement).\n",
+    "- Exposing data streams (Time, Vectors) to the Blackboard.\n",
+    "- Programmatic interaction with OpenUSD assets."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Part 1: OpenUSD Stage Validation (Python)\n",
+    "\n",
+    "Before we write vertex displacement shaders, we must ensure our imported OpenUSD stage actually contains the required sub-meshes. We will use the `pxr` USD core library to traverse the stage hierarchy and verify target primitives."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Install the USD core library if missing: !pip install usd-core\n",
+    "from pxr import Usd, UsdGeom\n",
+    "\n",
+    "def validate_usd_stage(stage_path: str):\n",
+    "    print(f\"Opening USD Stage: {stage_path}\")\n",
+    "    try:\n",
+    "        stage = Usd.Stage.Open(stage_path)\n",
+    "        if not stage:\n",
+    "            print(\"Error: Could not open stage.\")\n",
+    "            return\n",
+    "            \n",
+    "        mesh_count = 0\n",
+    "        for prim in stage.Traverse():\n",
+    "            if prim.IsA(UsdGeom.Mesh):\n",
+    "                mesh_count += 1\n",
+    "                print(f\"[VALID] Found Mesh Geometry: {prim.GetPath()}\")\n",
+    "        \n",
+    "        if mesh_count == 0:\n",
+    "            print(\"WARNING: No mesh geometry found. Vertex displacement shaders will have no effect.\")\n",
+    "        else:\n",
+    "            print(f\"\\nSUCCESS: Found {mesh_count} valid meshes ready for Shader Graph assignment.\")\n",
+    "            \n",
+    "    except Exception as e:\n",
+    "        print(f\"Validation Failed: {e}\")\n",
+    "\n",
+    "# Example usage (Replace with your MP3 USD asset path)\n",
+    "# validate_usd_stage('Assets/Models/Environment_Stage.usd')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Part 2: Shader Graph Pipeline Setup (Unity 6)\n",
+    "\n",
+    "### Step 2.1: Initialize the Graph\n",
+    "1. In Unity, right-click the Project window -> **Create > Shader Graph > HDRP > Lit Shader Graph**.\n",
+    "2. Name it `Procedural_Displacement_Mat`.\n",
+    "3. Double-click to open the visual canvas.\n",
+    "\n",
+    "### Step 2.2: The Blackboard Parameters\n",
+    "Open the Blackboard (top left) and expose the following properties for MP 3:\n",
+    "- `BaseColor` (Type: Color, Default: White)\n",
+    "- `NoiseScale` (Type: Float, Default: 10.0)\n",
+    "- `AnimationSpeed` (Type: Float, Default: 1.0)\n",
+    "- `DisplacementStrength` (Type: Float, Default: 0.5)\n",
+    "\n",
+    "### Step 2.3: Procedural Noise & Time (The Logic)\n",
+    "1. Create a **Time** node. Extract the `Time` output.\n",
+    "2. Multiply `Time` by your `AnimationSpeed` property.\n",
+    "3. Feed the result into a **Tiling And Offset** node (Offset port).\n",
+    "4. Feed the UV output into a **Voronoi** or **Simple Noise** node.\n",
+    "5. Plug your `NoiseScale` property into the Scale port of the noise node.\n",
+    "\n",
+    "### Step 2.4: Vertex Displacement\n",
+    "1. Take the output of your Noise node and multiply it by `DisplacementStrength`.\n",
+    "2. Create a **Normal Vector** node (Space: Object).\n",
+    "3. Multiply the scaled noise by the Normal Vector.\n",
+    "4. Create a **Position** node (Space: Object). Add the modified normal vector to the Position.\n",
+    "5. Pipe the result into the **Position** port of the **Vertex Context** in the Master Stack."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Part 3: MP 3 C# Parameterization Generator\n",
+    "\n",
+    "For Machine Problem 3, you are required to dynamically manipulate these shader parameters at runtime via a MonoBehaviour script. The Python script below will automatically generate the boilerplate C# code needed to interface with your Blackboard properties."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def generate_shader_controller_script(script_name=\"ShaderGraphController\"):\n",
+    "    csharp_code = f\"\"\"using UnityEngine;\n",
+    "\n",
+    "public class {script_name} : MonoBehaviour\n",
+    "{{\n",
+    "    [Header(\"Material References\")]\n",
+    "    public Material proceduralMaterial;\n",
+    "\n",
+    "    [Header(\"Dynamic Shader Parameters\")]\n",
+    "    [Range(0f, 50f)] public float noiseScale = 10f;\n",
+    "    [Range(0f, 5f)] public float animationSpeed = 1f;\n",
+    "    [Range(0f, 2f)] public float displacementStrength = 0.5f;\n",
+    "\n",
+    "    // Shader Property IDs (Performance Optimization)\n",
+    "    private int noiseScaleId;\n",
+    "    private int animationSpeedId;\n",
+    "    private int displacementStrengthId;\n",
+    "\n",
+    "    void Start()\n",
+    "    {{\n",
+    "        if (proceduralMaterial == null)\n",
+    "        {{\n",
+    "            Debug.LogError(\"Procedural Material not assigned!\");\n",
+    "            enabled = false;\n",
+    "            return;\n",
+    "        }}\n",
+    "\n",
+    "        // Cache string lookups into integer hashes for performance\n",
+    "        noiseScaleId = Shader.PropertyToID(\"_NoiseScale\");\n",
+    "        animationSpeedId = Shader.PropertyToID(\"_AnimationSpeed\");\n",
+    "        displacementStrengthId = Shader.PropertyToID(\"_DisplacementStrength\");\n",
+    "    }}\n",
+    "\n",
+    "    void Update()\n",
+    "    {{\n",
+    "        // Send real-time updates from CPU to the GPU Shader\n",
+    "        proceduralMaterial.SetFloat(noiseScaleId, noiseScale);\n",
+    "        proceduralMaterial.SetFloat(animationSpeedId, animationSpeed);\n",
+    "        proceduralMaterial.SetFloat(displacementStrengthId, displacementStrength);\n",
+    "        \n",
+    "        // MP3 requirement: Oscillate the displacement dynamically over time\n",
+    "        // float dynamicDisplacement = Mathf.PingPong(Time.time, displacementStrength);\n",
+    "        // proceduralMaterial.SetFloat(displacementStrengthId, dynamicDisplacement);\n",
+    "    }}\n",
+    "}}\n",
+    "\"\"\"\n",
+    "    print(f\"// Save this output to {script_name}.cs in Unity\\n\")\n",
+    "    print(csharp_code)\n",
+    "\n",
+    "generate_shader_controller_script()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 🚀 Machine Problem 3 (MP 3) Deliverable Checklist\n",
+    "\n",
+    "1. **Graph Compilation:** Successfully compile the HDRP Shader Graph with 0 errors.\n",
+    "2. **OpenUSD Application:** Create a Material instance of the shader and assign it to an imported `.usd` stage asset in the scene.\n",
+    "3. **Vertex Displacement:** The geometry must physically deform using a noise function piped into the Vertex Position node.\n",
+    "4. **C# Controller:** Attach the generated `ShaderGraphController.cs` script to an empty GameObject, assign your material, and manipulate the sliders in Play Mode to alter the shader in real-time.\n",
+    "5. **Submission:** Push the updated Unity Project (excluding `Library/` and `Temp/`) to your `cis536_736_hw` GitHub repository before the midnight Portcullis."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
