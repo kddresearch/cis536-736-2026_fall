@@ -20,7 +20,7 @@ document_last_updated_date: "2026-09-30"
 <div align="center">
  <h1>🎨 CIS 536/736 - Computer Graphics</h1>
  <p>
- <strong>Semester:</strong> Fall 2026 | <strong>Principal Investigator / Instructor:</strong> William H. Hsu, Ph.D.<br>
+ <strong>Semester:</strong> Fall 2026 | <strong>Instructor:</strong> William H. Hsu<br>
  <strong>Status:</strong> ACTIVE | <strong>Canvas LMS:</strong> <a href="https://k-state.instructure.com/courses/">Closed SSO Portal</a>
  </p>
 </div>
