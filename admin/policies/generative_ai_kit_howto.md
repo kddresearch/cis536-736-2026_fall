@@ -1,3 +1,9 @@
+<!--
+yaml_schema_version: "2.2"
+document_version: "1.2"
+document_last_updated_date: "2026-10-07"
+-->
+
 # How to Prime the Generative AI Kit (v1.0)
 **Path:** `admin/policies/generative_ai_kit_howto.md`
 
