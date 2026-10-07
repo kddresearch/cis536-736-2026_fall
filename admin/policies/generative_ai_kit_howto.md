@@ -40,3 +40,12 @@ Below are the exact procedures for priming the major platforms.
 *   **The Setup:** Open a new Grok chat.
 *   **Grounding:** Paste the raw text of the `05_term_project_taxonomy.md` directly into the prompt.
 *   **Priming:** Combine the taxonomy with the system instruction. *Prompt Example: "Acting as the CIS 536 Computer Graphics Design Coordinator, evaluate my idea for a [Insert Pillar/Track] pipeline. Here is the course taxonomy: [Paste Taxonomy]."*
+
+---
+
+# M365 Copilot Version
+
+Generated using this prompt:
+```text
+Ingest the following genai how-to and explain step-by-step, with citations, how to create a course project in each of the 5 main platforms. Emit output with the URLs inline in GFM in GitHub-flavored Markdown format in a fenced box.
+```
