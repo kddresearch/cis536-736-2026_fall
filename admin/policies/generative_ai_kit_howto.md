@@ -49,3 +49,198 @@ Generated using this prompt:
 ```text
 Ingest the following genai how-to and explain step-by-step, with citations, how to create a course project in each of the 5 main platforms. Emit output with the URLs inline in GFM in GitHub-flavored Markdown format in a fenced box.
 ```
+
+# Creating a CIS 536 Course Project Workspace in the Five Main GenAI Platforms
+
+**Source:** `admin/policies/generative_ai_kit_howto.md` (provided text)
+
+## Goal
+
+The purpose of the Generative AI Kit is to **ground** the AI in the realities of the Computer Graphics course before discussing project ideas, Unity assets, shaders, node graphs, or C# code. The guide explicitly states that students should make the AI ingest:
+
+- `05_term_project_taxonomy.md`
+- `06_term_project_sourcing_guide.md`
+
+before requesting project evaluation or design assistance. (Source: `generative_ai_kit_howto.md`)
+
+---
+
+## 1. ChatGPT or M365 Copilot
+
+**Platform URLs**
+
+- ChatGPT: <https://chatgpt.com/>
+- M365 Copilot: <https://m365.cloud.microsoft/>
+
+**Recommended use:** General QA, methodology brainstorming, C# debugging, Python reasoning, Shader Graph mathematics, and linear algebra validation. (Source: `generative_ai_kit_howto.md`)
+
+### Step-by-step
+
+1. Open a new chat in ChatGPT or M365 Copilot.
+2. Select a capable reasoning model (for example, GPT-4o where available).
+3. Click the paperclip / attachment icon.
+4. Upload:
+   - `05_term_project_taxonomy.md`
+   - `06_term_project_sourcing_guide.md`
+5. Paste the GenAI Kit `[SYSTEM INSTRUCTION]` block.
+6. Add the following priming instruction:
+
+   > Read the two attached markdown files. Do not respond until you have fully ingested the course taxonomy, the 5 pillars, and the feasibility rubric. Once ready, ask me for my project Pillar, Track, and proposed 3D Asset.
+
+7. Wait for the model to request:
+   - Pillar
+   - Track
+   - Proposed 3D Asset
+
+### Example project-start prompt
+
+> My Pillar is Procedural Content Generation. My Track is Terrain Synthesis. My proposed 3D asset is a stylized canyon environment. Evaluate feasibility using the course taxonomy and sourcing guide.
+
+**Citation:** `generative_ai_kit_howto.md`
+
+---
+
+## 2. Claude (Anthropic) or Qwen
+
+**Platform URLs**
+
+- Claude: <https://claude.ai/>
+- Qwen Chat: <https://chat.qwen.ai/>
+
+**Recommended use:** Deep pipeline synthesis, enforcement of frame-rate and polygon constraints, and academic writing critique. (Source: `generative_ai_kit_howto.md`)
+
+### Step-by-step
+
+1. Open Claude or Qwen.
+2. If using Claude Pro, create a new **Project**.
+3. Upload:
+   - `05_term_project_taxonomy.md`
+   - `06_term_project_sourcing_guide.md`
+4. In Claude Projects, place these files in the **Project Knowledge** area.
+5. Paste the GenAI Kit `[SYSTEM INSTRUCTION]`.
+6. Add the following constraint:
+
+   > Act as a strict Socratic gatekeeper. Reject any proposed 3D asset that falls into Tier 3 of the sourcing guide, or any shader that does not possess a mathematical baseline.
+
+7. Present your project concept.
+8. Ask Claude/Qwen to challenge assumptions rather than simply approving the idea.
+
+### Example project-start prompt
+
+> Evaluate my real-time water shader pipeline against the sourcing guide. Identify violations, missing mathematics, and feasibility concerns.
+
+**Citation:** `generative_ai_kit_howto.md`
+
+---
+
+## 3. Gemini
+
+**Platform URLs**
+
+- Gemini: <https://gemini.google.com/>
+- Google AI Studio: <https://aistudio.google.com/>
+
+**Recommended use:** Large-context analysis, coordinate-system conversion problems, and complex graphics pipelines. (Source: `generative_ai_kit_howto.md`)
+
+### Step-by-step
+
+1. Open Gemini Advanced or Google AI Studio.
+2. Upload:
+   - `05_term_project_taxonomy.md`
+   - `06_term_project_sourcing_guide.md`
+3. If uploads are unavailable, paste the contents directly into the conversation.
+4. Paste the GenAI Kit `[SYSTEM INSTRUCTION]`.
+5. Explicitly direct Gemini to evaluate graphics pipelines and constraints.
+6. Describe your project.
+7. Request an analysis of:
+   - VRAM requirements
+   - Asset complexity
+   - Coordinate conversions
+   - Runtime bottlenecks
+   - Feasibility rubric compliance
+
+### Example project-start prompt
+
+> Based on the Tier 1/Tier 2 sourcing guide I provided, evaluate my plan to import a COLMAP point cloud into Unity. What VRAM limits, coordinate conversion issues, and rendering bottlenecks should I expect?
+
+**Citation:** `generative_ai_kit_howto.md`
+
+---
+
+## 4. Perplexity
+
+**Platform URL**
+
+- Perplexity: <https://www.perplexity.ai/>
+
+**Recommended use:** Literature reviews, SIGGRAPH baseline discovery, Unity package discovery, and sourcing external references. (Source: `generative_ai_kit_howto.md`)
+
+### Step-by-step
+
+1. Create a new Perplexity Pro Search thread.
+2. Attach:
+   - `06_term_project_sourcing_guide.md`
+3. Use Perplexity primarily during:
+   - Asset Creation
+   - Literature Review
+4. Tell Perplexity to search only for resources satisfying the course sourcing rules.
+5. Specify your project topic.
+6. Request direct links to:
+   - SIGGRAPH papers
+   - Blender tutorials
+   - Open-source repositories
+   - Technical documentation
+
+### Example project-start prompt
+
+> I am building a procedural generation pipeline for CIS 536. Read the attached sourcing guidelines. Search for SIGGRAPH papers or open-source Blender 4.2 Geometry Node tutorials matching my terrain-generation topic that satisfy Tier 1 or Tier 2 requirements. Provide direct links.
+
+**Citation:** `generative_ai_kit_howto.md`
+
+---
+
+## 5. Grok (xAI)
+
+**Platform URL**
+
+- Grok: <https://grok.com/>
+
+**Recommended use:** Rapid syntax generation and reviewing recent GitHub activity related to topics such as OpenUSD and gsplat. (Source: `generative_ai_kit_howto.md`)
+
+### Step-by-step
+
+1. Open a new Grok chat.
+2. Copy and paste the raw contents of:
+   - `05_term_project_taxonomy.md`
+3. Paste the GenAI Kit `[SYSTEM INSTRUCTION]`.
+4. Describe your Pillar and Track.
+5. Ask Grok to act as the CIS 536 design coordinator.
+6. Request feasibility analysis, architecture suggestions, and implementation guidance.
+
+### Example project-start prompt
+
+> Acting as the CIS 536 Computer Graphics Design Coordinator, evaluate my idea for a Procedural Content Generation pipeline. Here is the course taxonomy: [PASTE TAXONOMY].
+
+**Citation:** `generative_ai_kit_howto.md`
+
+---
+
+# Recommended Workflow Across Platforms
+
+1. **Start with ChatGPT, Copilot, Claude, or Qwen**
+   - Define the project.
+   - Validate feasibility.
+   - Check mathematical foundations.
+
+2. **Use Gemini**
+   - Stress-test technical details.
+   - Analyze coordinate systems, memory, and rendering constraints.
+
+3. **Use Perplexity**
+   - Find papers, tutorials, datasets, and software packages.
+
+4. **Use Grok**
+   - Generate implementation scaffolding.
+   - Review emerging tooling and repository changes.
+
+This workflow follows the platform specializations recommended by the GenAI Kit and ensures that all project evaluations are grounded in the course taxonomy, five pillars, and feasibility rubric before development begins. (Source: `generative_ai_kit_howto.md`)
