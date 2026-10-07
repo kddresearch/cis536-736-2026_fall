@@ -1,7 +1,7 @@
 <!--
 yaml_schema_version: "2.2"
-document_version: "1.1"
-document_last_updated_date: "2026-10-02"
+document_version: "1.2"
+document_last_updated_date: "2026-10-06"
 -->
 
 <br>
@@ -66,3 +66,135 @@ An advanced exploration of modern computer graphics workflows, bridging fundamen
 git clone [https://github.com/kddresearch/cis536-736-2026_fall.git](https://github.com/kddresearch/cis536-736-2026_fall.git)
 cd cis536-736-2026_fall
 # Proceed to /admin/syllabus for setup and phase alignment
+```
+
+## 🦅 Lab Execution Protocols
+
+All Teaching Assistants and GRAs operating in this repository fall under the KDD Lab **Keep Flying Directive v2.1**.
+
+* **Observable State:** Progress is measured by commits, drafts, logs, and reproducible outputs—not intentions.
+* **The Triad:** When opening an issue or Pull Request, provide explicit goals, current blockers, and proposed next actions.
+* **Artifact-Gated Routing:** Do not request synchronous meetings for routine status updates. Push your grading state or syllabus updates to this repository first.
+
+## 👥 Instructional Staff
+
+| Role | Name | GitHub Handle |
+| --- | --- | --- |
+| **Instructor** | William H. Hsu | [@banazir
+
+## 📂 Repository Structure (Full Tree)
+
+<details>
+<summary><b>Click to expand: Course Repository Template Directory Tree</b></summary>
+
+```
+Folder PATH listing for volume Windows
+Volume serial number is 60E2-4FEF
+C:.
+|   README.md
+|   structure_dump.txt
+|   
++---.github
+|   \---ISSUE_TEMPLATE
+|           .gitkeep
+|           
++---admin
+|   +---policies
+|   |       .gitkeep
+|   |       
+|   \---syllabus
+|           .gitkeep
+|           lecture_schedule.md
+|           
++---assignments
+|   +---homework
+|   |       .gitkeep
+|   |       week5.ipynb
+|   |       week6.ipynb
+|   |       week7.ipynb
+|   |       
+|   +---machine_problems
+|   |   |   .gitkeep
+|   |   |   
+|   |   \---mp3_pbr_shadergraph
+|   |           student_submission_README_template.md
+|   |           
+|   \---project_sprints
+|           .gitkeep
+|           
++---lectures
+|       lecture-12.md
+|       lecture-13.md
+|       lecture-14.md
+|       lecture-15.md
+|       lecture-16.md
+|       lecture-17.md
+|       
++---modules
+|   +---module_00
+|   |       .gitkeep
+|   |       
+|   +---module_01
+|   |       .gitkeep
+|   |       
+|   +---module_02
+|   |       .gitkeep
+|   |       
+|   +---module_03
+|   |       .gitkeep
+|   |       
+|   +---module_04
+|   |       .gitkeep
+|   |       
+|   +---module_05
+|   |       .gitkeep
+|   |       README.md
+|   |       
+|   +---module_06
+|   |       .gitkeep
+|   |       README.md
+|   |       
+|   +---module_07
+|   |       .gitkeep
+|   |       
+|   +---module_08
+|   |       .gitkeep
+|   |       
+|   +---module_09
+|   |       .gitkeep
+|   |       
+|   +---module_10
+|   |       .gitkeep
+|   |       
+|   +---module_11
+|   |       .gitkeep
+|   |       
+|   +---module_12
+|   |       .gitkeep
+|   |       
+|   \---module_13
+|           .gitkeep
+|           
++---platforms
+|   +---canvas
+|   |       .gitkeep
+|   |       
+|   +---gemini
+|   |       .gitkeep
+|   |       
+|   +---github
+|   |       github_intro.md
+|   |       
+|   +---moodle
+|   |       .gitkeep
+|   |       
+|   \---piazza
+|           .gitkeep
+|           
+\---slides
+    |   README.md
+    |   
+    \---archive
+            README.md
+```
+</details>
