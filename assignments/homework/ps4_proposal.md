@@ -29,8 +29,15 @@ Your proposal must be a **1 to 1.5-page PDF** containing the following sections 
 * **Milestones:** List 3-6 intermediate technical subtasks with an approximate weekly schedule mapping to the Interim Update and Final Report.
 * **GenAI Audit:** Did you use the Generative AI Kit to synthesize this proposal? You must include your `GenAI.pdf` log or explicitly state "No GenAI Used."
 
-## 4. Grading Rubric (30 Pts)
-* **Scope & Alignment (10 pts):** Clearly identifies a Pillar and Track. Problem statement and 3D task are well-defined.
-* **Feasibility Check (10 pts):** Assets and toolchains exist and are explicitly named (e.g., Unity 6 LTS, OpenUSD). VRAM/poly scope is realistic. Baseline is established.
-* **Clarity & Format (5 pts):** Follows exact section structure. Submitted as a clean PDF.
-* **GenAI Verification (5 pts):** Includes the required GenAI log or states AI was not used.
+## 4. Grading Rubric (40 Points Total)
+
+This milestone is worth 40 points total, split between your Discussion Draft (10 pts) and your Formal PDF Submission (30 pts).
+
+**Part 1: Draft Participation (10 pts)**
+* **Draft Submission (10 pts):** Initial draft posted to the Canvas Discussion board, including Pillar, Track, and Asset definition. Required to receive an approved team number.
+
+**Part 2: Formal Proposal PDF (30 pts)**
+* **Scope & Alignment (10 pts):** Clearly identifies a Methodological Pillar and Category Track. Problem statement and 3D graphics task are well-defined.
+* **Feasibility Check (10 pts):** Target assets and toolchains exist and are explicitly named (e.g., Unity 6 LTS, OpenUSD). VRAM/poly scope is realistic. Baseline is established.
+* **Clarity & Format (5 pts):** Follows the exact required section structure. Submitted as a clean PDF.
+* **GenAI Verification (5 pts):** Includes the required GenAI log (`GenAI.pdf`) or explicitly states AI was not used.
