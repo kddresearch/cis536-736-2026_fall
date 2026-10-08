@@ -1,7 +1,7 @@
 # PS 4: Term Project Proposal
 **Milestone 1 of 3: Defining the Scope**
 
-**📅 Due:** Sun 11 Oct 2026 | **💯 Points:** 30 (Undroppable) | **👥 Team:** 1–3 Students
+**📅 Due:** Sun 11 Oct 2026 | **💯 Points:** 40 (Undroppable) | **👥 Team:** 1–3 Students
 
 > **🚨 CRITICAL SUBMISSION POLICY**
 > **Proposals are INDIVIDUAL:** Even if you are forming a team, **EACH** member must submit their own proposal document. Do not rely on a teammate to submit on your behalf. Failure to submit your own PDF will result in a zero for this milestone.
