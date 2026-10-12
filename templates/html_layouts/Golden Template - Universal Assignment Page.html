@@ -1,0 +1,93 @@
+<div style="font-family: 'Aptos', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; line-height: 1.6; color: #2d3b45;">
+    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 30px; font-size: 0.9em; color: #666;">
+        <div><a style="text-decoration: none; color: #666;" href="{{COURSE_HOME_URL}}">Home</a> &raquo; <a style="text-decoration: none; color: #666;" href="{{PHASE_URL}}">{{PHASE_NAME}}</a> &raquo; <a style="text-decoration: none; color: #666;" href="{{MODULE_URL}}">{{MODULE_NAME}}</a> &raquo; <span style="color: #4b2e83;">{{ASSIGNMENT_ID}}</span></div>
+        <div><a style="text-decoration: none; color: #d64309;" href="{{ASSIGNMENTS_INDEX_URL}}">📝 All Assignments</a></div>
+    </div>
+    <div style="background-color: #e3f2fd; border: 1px solid #bbdefb; border-left: 5px solid #2196f3; padding: 15px; margin-bottom: 30px; border-radius: 4px;">
+        <h4 style="margin-top: 0; color: #0d47a1;"><strong>ℹ️ {{ALERT_TITLE}}</strong></h4>
+        <p style="margin-bottom: 10px; font-size: 0.95em;">{{ALERT_TEXT}}</p>
+    </div>
+    <div style="background: linear-gradient(135deg, #4b2e83 0%, #b7a57a 100%); padding: 30px; border-radius: 8px; color: white; margin-bottom: 30px;"><span style="background-color: rgba(255,255,255,0.2); color: white; padding: 5px 10px; border-radius: 4px; font-size: 0.8em;">{{HEADER_TAG}}</span>
+        <h1 style="margin: 15px 0 5px 0; font-size: 28px;">{{ASSIGNMENT_TITLE}}</h1>
+        <p style="margin: 0; font-size: 18px;">{{ASSIGNMENT_SUBTITLE}}</p>
+    </div>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; background-color: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px;">
+        <div style="flex: 1; min-width: 150px;"><strong>📅 Assigned:</strong><br />{{DATE_ASSIGNED}}</div>
+        <div style="flex: 1; min-width: 150px;"><strong>⏰ Due:</strong><br />{{DATE_DUE}}</div>
+        <div style="flex: 1; min-width: 150px;"><strong>💯 Points:</strong><br />{{POINTS}}</div>
+        <div style="flex: 1; min-width: 150px;"><strong>📂 Submit:</strong><br />{{SUBMISSION_FORMAT}}</div>
+    </div>
+    <div style="margin-bottom: 40px;">
+        <h2 style="border-bottom: 2px solid #b7a57a; padding-bottom: 10px; color: #4b2e83;">Required Readings</h2>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px; background-color: #eef2f5; padding: 20px; border-radius: 8px; border: 1px solid #d1d9e0;">
+                <h4 style="margin-top: 0; color: #4b2e83;">{{RESOURCE_TITLE_1}}</h4>
+                <ul style="padding-left: 20px; margin-bottom: 10px; font-size: 0.95em;">
+                    <li><strong>{{CHAPTER_REF_1}}:</strong> {{CHAPTER_DESC_1}}</li>
+                    <li><strong>{{CHAPTER_REF_2}}:</strong> {{CHAPTER_DESC_2}}</li>
+                </ul>
+                <a style="color: #d64309; text-decoration: none;" href="{{RESOURCE_URL_1}}" target="_blank" rel="noopener">📖 Access Resource &rarr;</a>
+            </div>
+            <div style="flex: 1; min-width: 300px; background-color: #eef2f5; padding: 20px; border-radius: 8px; border: 1px solid #d1d9e0;">
+                <h4 style="margin-top: 0; color: #4b2e83;">{{RESOURCE_TITLE_2}}</h4>
+                <ul style="padding-left: 20px; margin-bottom: 10px; font-size: 0.95em;">
+                    <li><strong>{{CHAPTER_REF_3}}:</strong> {{CHAPTER_DESC_3}}</li>
+                </ul>
+                <a style="color: #d64309; text-decoration: none;" href="{{RESOURCE_URL_2}}" target="_blank" rel="noopener">📘 Access Resource &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 40px 0;" />
+    <div style="margin-bottom: 40px;">
+        <h3 style="color: #4b2e83;">Part 1: {{PART_1_TITLE}}</h3>
+        <p style="font-style: italic; color: #666;">({{PART_1_POINTS}} Points)</p>
+        <p>{{PART_1_INSTRUCTIONS}}</p>
+        <div style="margin-bottom: 25px;">
+            <h4 style="color: #2d3b45; border-left: 4px solid #4b2e83; padding-left: 10px;">{{SUBSECTION_TITLE}}</h4>
+            <ul style="padding-left: 20px; color: #444;">
+                <li>{{QUESTION_OR_TASK_1}}</li>
+                <li>{{QUESTION_OR_TASK_2}}</li>
+            </ul>
+        </div>
+    </div>
+    <div style="margin-bottom: 40px;">
+        <h3 style="color: #4b2e83;">Part 2: {{PART_2_TITLE}}</h3>
+        <p style="font-style: italic; color: #666;">({{PART_2_POINTS}} Points)</p>
+        <div style="border: 1px solid #2196f3; background-color: #e3f2fd; padding: 20px; border-radius: 8px;">
+            <p style="margin-top: 0;"><strong>Objective:</strong> {{OBJECTIVE_TEXT}}</p>
+            <ol style="padding-left: 20px; color: #444;">
+                <li>{{STEP_1}}</li>
+                <li>{{STEP_2}}</li>
+                <li>{{STEP_3}}</li>
+            </ol>
+            <p style="margin-bottom: 0;"><strong>Deliverable:</strong> {{DELIVERABLE_TEXT}}</p>
+        </div>
+    </div>
+    <div style="margin-bottom: 40px;">
+        <h3 style="color: #4b2e83;">Scoring Rubric</h3>
+        <table style="width: 100%; border-collapse: collapse; border: 1px solid #e0e0e0;">
+            <thead style="background-color: #f5f5f5;">
+                <tr>
+                    <th style="padding: 12px; border: 1px solid #ddd; text-align: left; width: 25%;">Component</th>
+                    <th style="padding: 12px; border: 1px solid #ddd; text-align: left; width: 15%;">Weight</th>
+                    <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 12px; border: 1px solid #ddd;"><strong>{{RUBRIC_ITEM_1}}</strong></td>
+                    <td style="padding: 12px; border: 1px solid #ddd;">{{RUBRIC_POINTS_1}}</td>
+                    <td style="padding: 12px; border: 1px solid #ddd;">{{RUBRIC_DESC_1}}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border: 1px solid #ddd;"><strong>{{RUBRIC_ITEM_2}}</strong></td>
+                    <td style="padding: 12px; border: 1px solid #ddd;">{{RUBRIC_POINTS_2}}</td>
+                    <td style="padding: 12px; border: 1px solid #ddd;">{{RUBRIC_DESC_2}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div style="margin-top: 30px;"><a style="display: block; width: auto; background-color: #f8f9fa; border: 1px solid #ccc; color: #444; padding: 15px; text-align: center; text-decoration: none; border-radius: 8px; margin-bottom: 15px; font-size: 1.1em;" href="{{COURSE_HOME_URL}}"> 🏠 Return to Course Home </a>
+        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;"><a style="flex: 1; max-width: 250px; background-color: #fff3cd; color: #856404; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.1em; border: 1px solid #ffeeba; padding: 10px;" title="View All Assignments" href="{{ASSIGNMENTS_INDEX_URL}}"> <span style="font-size: 1.2em; margin-right: 8px;">📝</span> All HW </a> <a style="flex: 1; max-width: 250px; background-color: #f0f0f0; color: #444; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.1em; border: 1px solid #ddd; padding: 10px;" title="Up to Module" href="{{MODULE_URL}}"> <span style="font-size: 1.2em; margin-right: 8px;">⬆️</span> Module </a> <a style="flex: 1; max-width: 250px; background-color: #f0f0f0; color: #444; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.1em; border: 1px solid #ddd; padding: 10px;" title="Up to Phase" href="{{PHASE_URL}}"> <span style="font-size: 1.2em; margin-right: 8px;">⏫</span> Phase </a></div>
+    </div>
+</div>

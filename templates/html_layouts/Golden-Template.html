@@ -1,0 +1,86 @@
+<div style="font-family: 'Aptos', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; line-height: 1.6; color: #2d3b45;">
+
+    <div style="background: linear-gradient(135deg, #4b2e83 0%, #b7a57a 100%); padding: 30px; border-radius: 8px; color: white; margin-bottom: 30px;">
+        <h1 style="margin: 0; font-size: 28px; font-weight: 700;">Module 02: Search & Optimization</h1>
+        <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">Navigating State Spaces, From BFS to A*</p>
+    </div>
+
+    <div style="margin-bottom: 40px;">
+        <h2 style="border-bottom: 2px solid #b7a57a; padding-bottom: 10px; color: #4b2e83;">Introduction</h2>
+        <p>Welcome to the foundation of Artificial Intelligence. Before we can have agents that "learn" (Machine Learning), we need agents that can "plan." In this module, we treat problem-solving as <strong>search</strong>: finding a sequence of actions that leads from a start state to a goal state.</p>
+        <p>We will cover the classics (BFS, DFS) and move quickly to the algorithms that still power modern systems like GPS navigation and game pathfinding (A*).</p>
+    </div>
+
+    <div style="background-color: #f8f9fa; border-left: 5px solid #4b2e83; padding: 20px; margin-bottom: 40px; border-radius: 4px;">
+        <h3 style="margin-top: 0; color: #4b2e83;">Learning Objectives</h3>
+        <ul style="margin-bottom: 0; padding-left: 20px;">
+            <li><strong>Formalize</strong> a real-world problem as a State Space Graph (States, Actions, Transitions).</li>
+            <li><strong>Implement</strong> Uninformed Search strategies (BFS, DFS, IDS) and analyze their complexity.</li>
+            <li><strong>Apply</strong> Heuristic Search (A*) and define <em>admissibility</em> and <em>consistency</em>.</li>
+            <li><strong>Differentiate</strong> between Tree Search (forgetful) and Graph Search (memorable).</li>
+        </ul>
+    </div>
+
+    <div style="margin-bottom: 40px;">
+        <h2 style="border-bottom: 2px solid #b7a57a; padding-bottom: 10px; color: #4b2e83;">Weekly Schedule</h2>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px; border: 1px solid #e0e0e0;">
+            <thead style="background-color: #4b2e83; color: white;">
+                <tr>
+                    <th style="padding: 12px; text-align: left; border: 1px solid #e0e0e0;">Day</th>
+                    <th style="padding: 12px; text-align: left; border: 1px solid #e0e0e0;">Topic</th>
+                    <th style="padding: 12px; text-align: left; border: 1px solid #e0e0e0;">Resources</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 12px; border: 1px solid #e0e0e0;"><strong>Mon</strong></td>
+                    <td style="padding: 12px; border: 1px solid #e0e0e0;">Uninformed Search (BFS/DFS)</td>
+                    <td style="padding: 12px; border: 1px solid #e0e0e0;"><a href="#" style="color: #4b2e83; text-decoration: none; font-weight: bold;">Lecture Slides 02</a><br><span style="font-size: 0.9em; color: #666;">Reading: P&M Ch 3.1-3.4</span></td>
+                </tr>
+                <tr style="background-color: #fafafa;">
+                    <td style="padding: 12px; border: 1px solid #e0e0e0;"><strong>Wed</strong></td>
+                    <td style="padding: 12px; border: 1px solid #e0e0e0;">Heuristic Search (A*)</td>
+                    <td style="padding: 12px; border: 1px solid #e0e0e0;"><a href="#" style="color: #4b2e83; text-decoration: none; font-weight: bold;">Lecture Slides 03</a><br><span style="font-size: 0.9em; color: #666;">Reading: P&M Ch 3.5-3.6</span></td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border: 1px solid #e0e0e0;"><strong>Fri</strong></td>
+                    <td style="padding: 12px; border: 1px solid #e0e0e0;">Local Search & Optimization</td>
+                    <td style="padding: 12px; border: 1px solid #e0e0e0;"><a href="#" style="color: #4b2e83; text-decoration: none; font-weight: bold;">Lecture Slides 04</a><br><span style="font-size: 0.9em; color: #666;">Reading: P&M Ch 4.8</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 40px;">
+        <div style="flex: 1; min-width: 300px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px;">
+            <h3 style="margin-top: 0; color: #4b2e83; border-bottom: 1px solid #eee; padding-bottom: 10px;">📖 Required Reading</h3>
+            <ul style="padding-left: 20px; margin-bottom: 0;">
+                <li style="margin-bottom: 10px;">
+                    <strong>Poole & Mackworth (3e):</strong> <a href="https://artint.info/3e/html/ArtInt3e.Ch3.html" target="_blank" style="color: #d64309;">Chapter 3: Searching for Solutions</a>
+                </li>
+                <li style="margin-bottom: 10px;">
+                    <strong>Video:</strong> <a href="#" style="color: #d64309;">A* Search Visualization (5 min)</a>
+                </li>
+            </ul>
+        </div>
+        <div style="flex: 1; min-width: 300px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px;">
+            <h3 style="margin-top: 0; color: #4b2e83; border-bottom: 1px solid #eee; padding-bottom: 10px;">💻 Lab & Code</h3>
+            <ul style="padding-left: 20px; margin-bottom: 0;">
+                <li style="margin-bottom: 10px;">
+                    <strong>GitHub Classroom:</strong> <a href="#" style="color: #d64309;">Accept Assignment 1 Repo</a>
+                </li>
+                <li style="margin-bottom: 10px;">
+                    <strong>Docker:</strong> <code>docker pull kstate/cis530-search:latest</code>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="background-color: #eef2f5; padding: 25px; border-radius: 8px; text-align: center; border: 1px solid #d1d9e0;">
+        <h3 style="margin-top: 0; color: #2d3b45;">📝 Assessment: Homework 1</h3>
+        <p style="margin-bottom: 20px;">Implement BFS, DFS, and A* for the Pacman agent. Complete the analysis report.</p>
+        <a href="#" style="display: inline-block; background-color: #4b2e83; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 16px;">Go to Assignment 1</a>
+        <p style="margin-top: 15px; font-size: 14px; color: #666;"><strong>Due:</strong> Monday, Feb 02 at 11:59 PM</p>
+    </div>
+
+</div>

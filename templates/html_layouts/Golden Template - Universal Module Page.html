@@ -1,0 +1,141 @@
+<div style="font-family: 'Aptos', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; line-height: 1.6; color: #2d3b45;">
+    
+    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 30px; font-size: 0.9em; color: #666;">
+        <div>
+            <a style="text-decoration: none; color: #666;" href="{{COURSE_HOME_URL}}">Home</a> &raquo; 
+            <a style="text-decoration: none; color: #666;" href="{{PHASE_URL}}">{{PHASE_NAME}}</a> &raquo; 
+            <span style="color: #4b2e83;">{{MODULE_ID}}</span>
+        </div>
+        <div>
+            <a style="text-decoration: none; color: #d64309;" href="{{MODULES_INDEX_URL}}">📦 All Modules</a>
+        </div>
+    </div>
+
+    <div style="background: linear-gradient(135deg, #4b2e83 0%, #b7a57a 100%); padding: 30px; border-radius: 8px; color: white; margin-bottom: 30px;">
+        <span style="background-color: rgba(255,255,255,0.2); color: white; padding: 5px 10px; border-radius: 4px; font-size: 0.8em;">{{WEEK_RANGE}}</span>
+        <h1 style="margin: 15px 0 5px 0; font-size: 28px;">{{MODULE_TITLE}}</h1>
+        <p style="margin: 0; font-size: 18px;">{{MODULE_SUBTITLE}}</p>
+    </div>
+
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 40px;">
+        <div style="flex: 1; min-width: 300px;">
+            <h2 style="border-bottom: 2px solid #b7a57a; padding-bottom: 10px; color: #4b2e83; margin-top: 0;">Module Overview</h2>
+            <p>{{MODULE_OVERVIEW_TEXT}}</p>
+        </div>
+        <div style="flex: 1; min-width: 300px; background-color: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px;">
+            <h3 style="margin-top: 0; color: #2d3b45; font-size: 1.1em; border-bottom: 1px solid #ddd; padding-bottom: 8px;">🎯 Learning Objectives</h3>
+            <ul style="padding-left: 20px; margin-bottom: 0; color: #444; font-size: 0.95em;">
+                <li>{{OBJECTIVE_1}}</li>
+                <li>{{OBJECTIVE_2}}</li>
+                <li>{{OBJECTIVE_3}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 40px;">
+        <h2 style="border-bottom: 2px solid #b7a57a; padding-bottom: 10px; color: #4b2e83;">📅 Weekly Schedule</h2>
+        <div style="overflow-x: auto; border: 1px solid #e0e0e0; border-radius: 8px;">
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead style="background-color: #f8f9fa; color: #4b2e83;">
+                    <tr>
+                        <th style="padding: 12px; text-align: left; width: 25%;">Date / Lecture</th>
+                        <th style="padding: 12px; text-align: left; width: 40%;">Topic</th>
+                        <th style="padding: 12px; text-align: left; width: 20%;">Readings</th>
+                        <th style="padding: 12px; text-align: center; width: 15%;">Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 12px;"><strong>{{LECTURE_1_NUM}}</strong><br /><span style="font-size: 0.9em; color: #666;">{{LECTURE_1_DATE}}</span></td>
+                        <td style="padding: 12px;">{{LECTURE_1_TOPIC}}</td>
+                        <td style="padding: 12px; font-size: 0.9em;"><em>{{LECTURE_1_READING}}</em></td>
+                        <td style="padding: 12px; text-align: center;"><a style="color: #4b2e83; text-decoration: none; font-weight: bold;" href="#lecture_{{LECTURE_1_ID}}">Jump &darr;</a></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 12px;"><strong>{{LECTURE_2_NUM}}</strong><br /><span style="font-size: 0.9em; color: #666;">{{LECTURE_2_DATE}}</span></td>
+                        <td style="padding: 12px;">{{LECTURE_2_TOPIC}}</td>
+                        <td style="padding: 12px; font-size: 0.9em;"><em>{{LECTURE_2_READING}}</em></td>
+                        <td style="padding: 12px; text-align: center;"><a style="color: #4b2e83; text-decoration: none; font-weight: bold;" href="#lecture_{{LECTURE_2_ID}}">Jump &darr;</a></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px;"><strong>{{LECTURE_3_NUM}}</strong><br /><span style="font-size: 0.9em; color: #666;">{{LECTURE_3_DATE}}</span></td>
+                        <td style="padding: 12px;">{{LECTURE_3_TOPIC}}</td>
+                        <td style="padding: 12px; font-size: 0.9em;"><em>{{LECTURE_3_READING}}</em></td>
+                        <td style="padding: 12px; text-align: center;"><a style="color: #4b2e83; text-decoration: none; font-weight: bold;" href="#lecture_{{LECTURE_3_ID}}">Jump &darr;</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 40px 0;" />
+
+    <div id="lecture_{{LECTURE_1_ID}}" style="margin-bottom: 40px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <h3 style="color: #4b2e83; margin: 0; border-left: 4px solid #d64309; padding-left: 10px;">{{LECTURE_1_TITLE}}</h3>
+            <div style="display: flex; gap: 10px;">
+                <a style="font-size: 0.9em; background-color: #f2f2f2; color: #333; padding: 6px 12px; border-radius: 4px; text-decoration: none; border: 1px solid #ccc;" href="{{LECTURE_1_SLIDES}}" target="_blank" rel="noopener">📄 Slides</a>
+                <a style="font-size: 0.9em; background-color: #4b2e83; color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none;" href="{{LECTURE_1_VIDEO}}" target="_blank" rel="noopener">▶ Video</a>
+            </div>
+        </div>
+        <div style="background-color: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px;">
+            <p style="margin-top: 0; font-size: 0.95em; color: #666;"><strong>Date:</strong> {{LECTURE_1_DATE}}</p>
+            <p>{{LECTURE_1_SUMMARY}}</p>
+            <ul style="margin-bottom: 0;">
+                <li><strong>{{KEY_POINT_1A}}:</strong> {{KEY_DESC_1A}}</li>
+                <li><strong>{{KEY_POINT_1B}}:</strong> {{KEY_DESC_1B}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="lecture_{{LECTURE_2_ID}}" style="margin-bottom: 40px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <h3 style="color: #4b2e83; margin: 0; border-left: 4px solid #d64309; padding-left: 10px;">{{LECTURE_2_TITLE}}</h3>
+            <div style="display: flex; gap: 10px;">
+                <a style="font-size: 0.9em; background-color: #f2f2f2; color: #333; padding: 6px 12px; border-radius: 4px; text-decoration: none; border: 1px solid #ccc;" href="{{LECTURE_2_SLIDES}}" target="_blank" rel="noopener">📄 Slides</a>
+                <a style="font-size: 0.9em; background-color: #4b2e83; color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none;" href="{{LECTURE_2_VIDEO}}" target="_blank" rel="noopener">▶ Video</a>
+            </div>
+        </div>
+        <div style="background-color: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px;">
+            <p style="margin-top: 0; font-size: 0.95em; color: #666;"><strong>Date:</strong> {{LECTURE_2_DATE}}</p>
+            <p>{{LECTURE_2_SUMMARY}}</p>
+            <ul style="margin-bottom: 0;">
+                <li><strong>{{KEY_POINT_2A}}:</strong> {{KEY_DESC_2A}}</li>
+                <li><strong>{{KEY_POINT_2B}}:</strong> {{KEY_DESC_2B}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="lecture_{{LECTURE_3_ID}}" style="margin-bottom: 40px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <h3 style="color: #4b2e83; margin: 0; border-left: 4px solid #d64309; padding-left: 10px;">{{LECTURE_3_TITLE}}</h3>
+            <div style="display: flex; gap: 10px;">
+                <a style="font-size: 0.9em; background-color: #f2f2f2; color: #333; padding: 6px 12px; border-radius: 4px; text-decoration: none; border: 1px solid #ccc;" href="{{LECTURE_3_SLIDES}}" target="_blank" rel="noopener">📄 Slides</a>
+                <a style="font-size: 0.9em; background-color: #4b2e83; color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none;" href="{{LECTURE_3_VIDEO}}" target="_blank" rel="noopener">▶ Video</a>
+            </div>
+        </div>
+        <div style="background-color: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px;">
+            <p style="margin-top: 0; font-size: 0.95em; color: #666;"><strong>Date:</strong> {{LECTURE_3_DATE}}</p>
+            <p>{{LECTURE_3_SUMMARY}}</p>
+            <ul style="margin-bottom: 0;">
+                <li><strong>{{KEY_POINT_3A}}:</strong> {{KEY_DESC_3A}}</li>
+                <li><strong>{{KEY_POINT_3B}}:</strong> {{KEY_DESC_3B}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="background-color: #fff3cd; border-left: 5px solid #ffc107; padding: 20px; border-radius: 4px; margin-bottom: 40px;">
+        <h3 style="margin-top: 0; color: #856404; font-size: 1.1em;">📝 Assignments Due This Week</h3>
+        <p style="margin-bottom: 0;"><strong>{{ASSIGNMENT_NAME}}:</strong> {{ASSIGNMENT_DESC}}. <a style="color: #d64309; font-weight: bold;" href="{{ASSIGNMENT_URL}}">View Assignment &rarr;</a></p>
+    </div>
+
+    <div style="margin-top: 30px;">
+        <a style="display: block; width: auto; background-color: #f8f9fa; border: 1px solid #ccc; color: #444; padding: 15px; text-align: center; text-decoration: none; border-radius: 8px; margin-bottom: 15px; font-size: 1.1em;" href="{{COURSE_HOME_URL}}"> 🏠 Return to Course Home </a>
+        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+            <a style="flex: 1; max-width: 250px; background-color: #f0f0f0; color: #444; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.1em; border: 1px solid #ddd; padding: 10px;" title="Previous Module" href="{{PREV_MODULE_URL}}"> ⬅️ Prev Module </a>
+            <a style="flex: 1; max-width: 250px; background-color: #fff3cd; color: #856404; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.1em; border: 1px solid #ffeeba; padding: 10px;" title="Up to Phase" href="{{PHASE_URL}}"> <span style="font-size: 1.2em; margin-right: 8px;">⏫</span> {{PHASE_NAME}} </a>
+            <a style="flex: 1; max-width: 250px; background-color: #f0f0f0; color: #444; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.1em; border: 1px solid #ddd; padding: 10px;" title="Next Module" href="{{NEXT_MODULE_URL}}"> Next Module ➡️ </a>
+        </div>
+    </div>
+
+</div>
