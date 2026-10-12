@@ -5,7 +5,7 @@ module: Module 8: Generative Geometry & 3D Gaussian Splatting
 released: Sun 25 Oct 2026
 due: Tue 03 Nov 2026
 prev: ../problem_sets/ps6_rigging_animation_design.md
-next: {{NEXT_ASSIGNMENT_RELATIVE_PATH}}
+next: ../homework/ps8_interim_report.md
 -->
 # MP 7: Generative Geometry & gsplat Reconstruction
 **Open-Weight Text/Image-to-3D Generation and Local 3D Gaussian Splatting Reconstruction**
