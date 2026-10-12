@@ -61,6 +61,6 @@ This assignment is worth 100 points total.
 
 | ⬅️ Previous | 📝 Index | Next ➡️ |
 |:---|:---:|---:|
-| [PS 6: Rigging & Animation Graph Design](../problem_sets/ps6_rigging_animation_design.md) | [[All Assignments]](../README.md#schedule) | [{{NEXT_ASSIGNMENT_TITLE}}]({{NEXT_ASSIGNMENT_RELATIVE_PATH}}) |
+| [PS 6: Generative AI Exploration](../homework/ps6_genai_exploration.md) | [[All Assignments]](../README.md#schedule) | [PS 8: Term Project Interim Report](../homework/ps8_interim_report.md) |
 
 [🏠 Course Home](../../README.md) · [⬆️ Module](../../modules/module_08/README.md) · [⏫ Phase](../../phases/phase_03/README.md)
