@@ -1,0 +1,106 @@
+<div style="font-family: 'Aptos', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 1000px; margin: 0 auto; line-height: 1.6; color: #2d3b45;">
+    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 30px; font-size: 0.9em; color: #666;">
+        <div><a style="text-decoration: none; color: #666;" href="{{CANVAS_HOME_URL}}">Home</a> &raquo; <span style="color: #4b2e83;">Assignments Index</span></div>
+        <div><a style="text-decoration: none; color: #d64309;" href="{{CANVAS_CALENDAR_URL}}">📅 Course Calendar</a></div>
+    </div>
+    <div style="background: linear-gradient(135deg, #4b2e83 0%, #b7a57a 100%); padding: 40px; border-radius: 8px; color: white; margin-bottom: 30px; text-align: center;">
+        <h1 style="margin: 0; font-size: 32px;">Assignments &amp; Deadlines</h1>
+        <p style="margin: 10px 0 0 0; font-size: 18px;">{{SEMESTER}} | {{COURSE_ID}} - {{COURSE_TITLE}}</p>
+    </div>
+    <div style="margin-bottom: 30px; background-color: #fff3cd; border-width: 1px 1px 1px 5px; border-style: solid; border-color: #ffeeba #ffeeba #ffeeba #ffc107; padding: 20px; border-radius: 4px;">
+        <h4 style="margin-top: 0; color: #856404; font-size: 1.1em;">⚠️ Grading &amp; Late Work Policies</h4>
+        <ul style="margin-bottom: 0; color: #555;">
+            <li><strong>Constraint Notice:</strong> This schedule guarantees a minimum {{MIN_LEAD_TIME}}-calendar-day lead time from release to due date for all assignments. It also enforces a strict minimum {{MIN_GAP_TIME}}-day gap between assignment due dates to protect student workload. {{OPTIONAL_EXCEPTION_NOTICE}}</li>
+            <li><strong>Drop Policy:</strong> The highest <strong>{{DROP_TARGET_COUNT}} of your {{TOTAL_ASSIGNMENT_COUNT}} regular assignments</strong> (non-project HWs and MPs) will count toward your final grade. The lowest {{DROP_COUNT}} scores are dropped automatically.</li>
+            <li><strong>Mandatory Milestones:</strong> The Term Project Milestones (PS 4, PS 8, HW 12) are shaded in green below. These are mandatory and <strong>cannot be dropped</strong>.</li>
+            <li><strong>Zero Late Work Allowed:</strong> Late submissions are not accepted. If an assignment closes, you will receive zero points unless you have a pre-approved, documented OSSA emergency.</li>
+        </ul>
+    </div>
+    <div style="display: flex; gap: 15px; margin-bottom: 20px; justify-content: center; flex-wrap: wrap;"><span style="background-color: #e8f5e9; color: #1b5e20; padding: 5px 12px; border-radius: 15px; font-size: 0.9em; border: 1px solid #c8e6c9;"><strong>PS</strong> = Problem Set (Theory/Written)</span> <span style="background-color: #e3f2fd; color: #0d47a1; padding: 5px 12px; border-radius: 15px; font-size: 0.9em; border: 1px solid #bbdefb;"><strong>MP</strong> = Machine Problem (Programming)</span> <span style="background-color: #fff3cd; color: #856404; padding: 5px 12px; border-radius: 15px; font-size: 0.9em; border: 1px solid #ffeeba;"><strong>HW</strong> = Homework (Writing &amp; Coding Parts)</span></div>
+    <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; background-color: #ffffff; border-radius: 8px; border: 1px solid #e0e0e0;">
+            <thead>
+                <tr style="background-color: #f8f9fa; color: #4b2e83;">
+                    <th style="padding: 15px; text-align: center; border-bottom: 2px solid #b7a57a; width: 14%;">Type</th>
+                    <th style="padding: 15px; border-bottom: 2px solid #b7a57a; width: 46%;">Assignment Title &amp; Topics</th>
+                    <th style="padding: 15px; border-bottom: 2px solid #b7a57a; width: 20%;">Release Date</th>
+                    <th style="padding: 15px; border-bottom: 2px solid #b7a57a; width: 20%;">Due Date (11:59 PM)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #eeeeee;">
+                    <td style="padding: 12px; text-align: center;"><strong><span style="background-color: #fff3cd; color: #856404; padding: 4px 8px; border-radius: 4px; border: 1px solid #ffeeba;">{{TYPE_1}} 1</span></strong></td>
+                    <td style="padding: 12px;"><strong>{{TITLE_1}}</strong></td>
+                    <td style="padding: 12px;">{{RELEASE_DATE_1}}</td>
+                    <td style="padding: 12px; color: #d32f2f;">{{DUE_DATE_1}}</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eeeeee;">
+                    <td style="padding: 12px; text-align: center;"><strong><span style="background-color: #e3f2fd; color: #0d47a1; padding: 4px 8px; border-radius: 4px; border: 1px solid #bbdefb;">{{TYPE_2}} 2</span></strong></td>
+                    <td style="padding: 12px;"><strong>{{TITLE_2}}</strong></td>
+                    <td style="padding: 12px;">{{RELEASE_DATE_2}}</td>
+                    <td style="padding: 12px; color: #d32f2f;">{{DUE_DATE_2}}</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eeeeee;">
+                    <td style="padding: 12px; text-align: center;"><strong><span style="background-color: #e3f2fd; color: #0d47a1; padding: 4px 8px; border-radius: 4px; border: 1px solid #bbdefb;">{{TYPE_3}} 3</span></strong></td>
+                    <td style="padding: 12px;"><strong>{{TITLE_3}}</strong></td>
+                    <td style="padding: 12px;">{{RELEASE_DATE_3}}</td>
+                    <td style="padding: 12px; color: #d32f2f;">{{DUE_DATE_3}}</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eeeeee; background-color: #f1f8e9;">
+                    <td style="padding: 12px; text-align: center;"><strong><span style="background-color: #e8f5e9; color: #1b5e20; padding: 4px 8px; border-radius: 4px; border: 1px solid #c8e6c9;">{{TYPE_4}} 4</span></strong></td>
+                    <td style="padding: 12px;"><strong>{{TITLE_4}}</strong><br /><span style="font-size: 0.8em; color: #1b5e20; background-color: #c8e6c9; padding: 2px 6px; border-radius: 3px;">Mandatory Milestone</span></td>
+                    <td style="padding: 12px;">{{RELEASE_DATE_4}}</td>
+                    <td style="padding: 12px; color: #d32f2f;">{{DUE_DATE_4}}</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eeeeee;">
+                    <td style="padding: 12px; text-align: center;"><strong><span style="background-color: #e3f2fd; color: #0d47a1; padding: 4px 8px; border-radius: 4px; border: 1px solid #bbdefb;">{{TYPE_5}} 5</span></strong></td>
+                    <td style="padding: 12px;"><strong>{{TITLE_5}}</strong></td>
+                    <td style="padding: 12px;">{{RELEASE_DATE_5}}</td>
+                    <td style="padding: 12px; color: #d32f2f;">{{DUE_DATE_5}}</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eeeeee;">
+                    <td style="padding: 12px; text-align: center;"><strong><span style="background-color: #e8f5e9; color: #1b5e20; padding: 4px 8px; border-radius: 4px; border: 1px solid #c8e6c9;">{{TYPE_6}} 6</span></strong></td>
+                    <td style="padding: 12px;"><strong>{{TITLE_6}}</strong></td>
+                    <td style="padding: 12px;">{{RELEASE_DATE_6}}</td>
+                    <td style="padding: 12px; color: #d32f2f;">{{DUE_DATE_6}}</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eeeeee;">
+                    <td style="padding: 12px; text-align: center;"><strong><span style="background-color: #e3f2fd; color: #0d47a1; padding: 4px 8px; border-radius: 4px; border: 1px solid #bbdefb;">{{TYPE_7}} 7</span></strong></td>
+                    <td style="padding: 12px;"><strong>{{TITLE_7}}</strong></td>
+                    <td style="padding: 12px;">{{RELEASE_DATE_7}}</td>
+                    <td style="padding: 12px; color: #d32f2f;">{{DUE_DATE_7}}</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eeeeee; background-color: #f1f8e9;">
+                    <td style="padding: 12px; text-align: center;"><strong><span style="background-color: #e8f5e9; color: #1b5e20; padding: 4px 8px; border-radius: 4px; border: 1px solid #c8e6c9;">{{TYPE_8}} 8</span></strong></td>
+                    <td style="padding: 12px;"><strong>{{TITLE_8}}</strong><br /><span style="font-size: 0.8em; color: #1b5e20; background-color: #c8e6c9; padding: 2px 6px; border-radius: 3px;">Mandatory Milestone</span></td>
+                    <td style="padding: 12px;">{{RELEASE_DATE_8}}</td>
+                    <td style="padding: 12px; color: #d32f2f;">{{DUE_DATE_8}}</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eeeeee;">
+                    <td style="padding: 12px; text-align: center;"><strong><span style="background-color: #e3f2fd; color: #0d47a1; padding: 4px 8px; border-radius: 4px; border: 1px solid #bbdefb;">{{TYPE_9}} 9</span></strong></td>
+                    <td style="padding: 12px;"><strong>{{TITLE_9}}</strong></td>
+                    <td style="padding: 12px;">{{RELEASE_DATE_9}}</td>
+                    <td style="padding: 12px; color: #d32f2f;">{{DUE_DATE_9}}</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eeeeee;">
+                    <td style="padding: 12px; text-align: center;"><strong><span style="background-color: #e3f2fd; color: #0d47a1; padding: 4px 8px; border-radius: 4px; border: 1px solid #bbdefb;">{{TYPE_10}} 10</span></strong></td>
+                    <td style="padding: 12px;"><strong>{{TITLE_10}}</strong></td>
+                    <td style="padding: 12px;">{{RELEASE_DATE_10}}</td>
+                    <td style="padding: 12px; color: #d32f2f;">{{DUE_DATE_10}}</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eeeeee;">
+                    <td style="padding: 12px; text-align: center;"><strong><span style="background-color: #e8f5e9; color: #1b5e20; padding: 4px 8px; border-radius: 4px; border: 1px solid #c8e6c9;">{{TYPE_11}} 11</span></strong></td>
+                    <td style="padding: 12px;"><strong>{{TITLE_11}}</strong></td>
+                    <td style="padding: 12px;">{{RELEASE_DATE_11}}</td>
+                    <td style="padding: 12px; color: #d32f2f;">{{DUE_DATE_11}}</td>
+                </tr>
+                <tr style="background-color: #f1f8e9;">
+                    <td style="padding: 12px; text-align: center;"><strong><span style="background-color: #fff3cd; color: #856404; padding: 4px 8px; border-radius: 4px; border: 1px solid #ffeeba;">{{TYPE_12}} 12</span></strong></td>
+                    <td style="padding: 12px;"><strong>{{TITLE_12}}</strong><br /><span style="font-size: 0.8em; color: #1b5e20; background-color: #c8e6c9; padding: 2px 6px; border-radius: 3px;">Mandatory Milestone</span></td>
+                    <td style="padding: 12px;">{{RELEASE_DATE_12}}</td>
+                    <td style="padding: 12px; color: #d32f2f;">{{DUE_DATE_12}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
