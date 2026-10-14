@@ -22,7 +22,7 @@ document_last_updated_time: "23:47:37 CDT"
  <h1>🎨 CIS 536/736 - Computer Graphics</h1>
  <p>
  <strong>Semester:</strong> Fall 2026 | <strong>Instructor:</strong> William H. Hsu<br>
- <strong>Status:</strong> ACTIVE | <strong>Canvas LMS:</strong> [Closed SSO Portal](https://k-state.instructure.com/courses/202756)
+ <strong>Status:</strong> ACTIVE | <strong>Canvas LMS:</strong> <a href="https://k-state.instructure.com/courses/202756">Closed SSO Portal</a>
  </p>
 </div>
 
