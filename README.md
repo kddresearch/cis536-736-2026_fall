@@ -1,7 +1,8 @@
 <!--
 yaml_schema_version: "2.2"
-document_version: "1.4"
+document_version: "1.5"
 document_last_updated_date: "2026-10-13"
+document_last_updated_time: "23:47:37 CDT"
 -->
 
 <br>
@@ -21,7 +22,7 @@ document_last_updated_date: "2026-10-13"
  <h1>🎨 CIS 536/736 - Computer Graphics</h1>
  <p>
  <strong>Semester:</strong> Fall 2026 | <strong>Instructor:</strong> William H. Hsu<br>
- <strong>Status:</strong> ACTIVE | <strong>Canvas LMS:</strong> <a href="https://k-state.instructure.com/courses/">Closed SSO Portal</a>
+ <strong>Status:</strong> ACTIVE | <strong>Canvas LMS:</strong> <a href="[Closed SSO Portal](https://k-state.instructure.com/courses/202756"></a>
  </p>
 </div>
 
