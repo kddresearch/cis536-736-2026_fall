@@ -12,9 +12,9 @@ You must establish a persistent workspace by defining your **TBox** (Terminologi
 ## 0. Prepare the Course Files (The TBox)
 Before configuring any platform, download the raw `.md` files of the following documents to your local machine:
 1. [generative_ai_kit_v2.md](./generative_ai_kit_v2.md) (The System Instructions & Tollbooth Gates)
-2. [term_project_guidelines.md](../../term_project/04_term_project_guidelines.md) (The Milestone Constraints & Sprint Deliverables)
-3. [term_project_taxonomy.md](../../term_project/05_term_project_taxonomy.md) (The 5x5 Matrix: 5 Pillars × 5 Tracks)
-4. [asset_discovery_matrix.md](../../term_project/06_term_project_sourcing_guide.md) (The Verifiable Golden Path & Tier 1–3 Sourcing Rules)
+2. [term_project_guidelines.md](../syllabus//04_term_project_guidelines.md) (The Milestone Constraints & Sprint Deliverables)
+3. [term_project_taxonomy.md](../syllabus/05_term_project_taxonomy.md) (The 5x5 Matrix: 5 Pillars × 5 Tracks)
+4. [asset_discovery_matrix.md](../syllabus/06_term_project_sourcing_guide.md) (The Verifiable Golden Path & Tier 1–3 Sourcing Rules)
 
 ---
 
