@@ -2,7 +2,7 @@
 
 | Phase | Module | Lecture | Date |
 | :--- | :--- | :--- | :--- |
-| **Phase [X]:** [Phase Name] | **Module [Y]:** [Module Title] | **Lecture [Z]:** [Lecture Title] | [Day, Month DD, YYYY] |
+**[Phase X](../phases/phase_0X/):** [Phase Name] | **[Module Y](../modules/module_YY/):** [Module Title] | **Lecture [Z]:** [Lecture Title] | [ddd dd mm yyyy]
 
 ---
 
