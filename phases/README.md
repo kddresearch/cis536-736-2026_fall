@@ -1,7 +1,7 @@
 <!--
 ---
 yaml_schema_version: "2.2"
-document_version: "1.2"
+document_version: "2.0"
 document_last_updated_date: "2026-10-26"
 document_monotonicity: "REQUIRED"
 routing_clearance: "PUBLIC - STUDENT FACING"
