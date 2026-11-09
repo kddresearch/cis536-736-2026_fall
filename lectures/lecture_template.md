@@ -1,14 +1,15 @@
 # [Course Identifier]: [Course Name]
 
-| Phase | Module | Lecture | Date |
-| :--- | :--- | :--- | :--- |
-**[Phase X](../phases/phase_0X/):** [Phase Name] | **[Module Y](../modules/module_YY/):** [Module Title] | **Lecture [Z]:** [Lecture Title] | [ddd dd mm yyyy]
+| Phase | Module | Lecture | Date | Assigned Reading |
+| :--- | :--- | :--- | :--- | :--- |
+**[Phase X](../phases/phase_0X/):** [Phase Name] | **[Module Y](../modules/module_YY/):** [Module Title] | **Lecture [Z]:** [Lecture Title] | [ddd dd mm yyyy] | [Assigned Reading (Optional Local Mirror)] |
 
 ---
 
 ## Slide 1: [Slide Title]
 ### [Course Identifier] - Lecture [Z]
 * **[Bullet 1]:** [Text]
+* **Assigned Reading:** [Assigned Reading (Optional Local Mirror Link)]
 * [Bullet 2]
 * [Bullet 3]
 
