@@ -1,4 +1,4 @@
-# [Course Identifier]: [Course Name]
+[# [Course Identifier]: [Course Name]
 
 | Phase | Module | Lecture | Date |
 | :--- | :--- | :--- | :--- |
@@ -115,3 +115,4 @@
 
 **Speaker Notes:**
 [Insert verbatim speaking notes, framing, and context for this slide.]
+](https://github.com/kddresearch/cis531-731-2026_fall/edit/main/lectures/lecture_10_slide_template.md)
