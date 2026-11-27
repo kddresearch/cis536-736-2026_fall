@@ -1,9 +1,9 @@
 <!--
 ---
 yaml_schema_version: "2.2"
-document_version: "1.0"
+document_version: "1.1"
 document_last_updated_date: "2026-11-26"
-document_last_updated_time: "23:41:00 CST"
+document_last_updated_time: "23:43:00 CST"
 document_monotonicity: "REQUIRED"
 routing_clearance: "PUBLIC - STUDENT FACING"
 template_metadata:
@@ -64,15 +64,14 @@ Together the phases cover **{{MODULE_RANGE_SUMMARY}}** and **{{LECTURE_COUNT_SUM
 
 | Phase Directory | Pedagogical Objective |
 | :--- | :--- |
-| [`phase_01/`](phase_01/) | **{{PHASE_01_EMOJI}} Phase I: {{PHASE_01_TITLE}}:** Modules {{PHASE_01_MODULES}} ({{PHASE_01_DATES}}; {{PHASE_01_LECTURES}}). {{PHASE_01_OBJECTIVE}} |
-| [`phase_02/`](phase_02/) | **{{PHASE_02_EMOJI}} Phase II: {{PHASE_02_TITLE}}:** Modules {{PHASE_02_MODULES}} ({{PHASE_02_DATES}}; {{PHASE_02_LECTURES}}). {{PHASE_02_OBJECTIVE}} |
-| [`phase_03/`](phase_03/) | **{{PHASE_03_EMOJI}} Phase III: {{PHASE_03_TITLE}}:** Modules {{PHASE_03_MODULES}} ({{PHASE_03_DATES}}; {{PHASE_03_LECTURES}}). {{PHASE_03_OBJECTIVE}} |
-| [`phase_04/`](phase_04/) | **{{PHASE_04_EMOJI}} Phase IV: {{PHASE_04_TITLE}}:** Modules {{PHASE_04_MODULES}} ({{PHASE_04_DATES}}; {{PHASE_04_LECTURES}}). {{PHASE_04_OBJECTIVE}} |
-| [`phase_05/`](phase_05/) | **{{PHASE_05_EMOJI}} Phase V: {{PHASE_05_TITLE}}:** Modules {{PHASE_05_MODULES}} ({{PHASE_05_DATES}}; {{PHASE_05_LECTURES}}). {{PHASE_05_OBJECTIVE}} |
+| [`phase_01/`](phase_01/) | **🔵 Phase I: {{PHASE_01_TITLE}}:** Modules {{PHASE_01_MODULES}} ({{PHASE_01_DATES}}; {{PHASE_01_LECTURES}}). {{PHASE_01_OBJECTIVE}} |
+| [`phase_02/`](phase_02/) | **🟢 Phase II: {{PHASE_02_TITLE}}:** Modules {{PHASE_02_MODULES}} ({{PHASE_02_DATES}}; {{PHASE_02_LECTURES}}). {{PHASE_02_OBJECTIVE}} |
+| [`phase_03/`](phase_03/) | **🟠 Phase III: {{PHASE_03_TITLE}}:** Modules {{PHASE_03_MODULES}} ({{PHASE_03_DATES}}; {{PHASE_03_LECTURES}}). {{PHASE_03_OBJECTIVE}} |
+| [`phase_04/`](phase_04/) | **🟣 Phase IV: {{PHASE_04_TITLE}}:** Modules {{PHASE_04_MODULES}} ({{PHASE_04_DATES}}; {{PHASE_04_LECTURES}}). {{PHASE_04_OBJECTIVE}} |
+| [`phase_05/`](phase_05/) | **🟤 Phase V: {{PHASE_05_TITLE}}:** Modules {{PHASE_05_MODULES}} ({{PHASE_05_DATES}}; {{PHASE_05_LECTURES}}). {{PHASE_05_OBJECTIVE}} |
 
 <br>
 <hr>
 <p align="center">
  <i>Maintained by the <a href="https://github.com/kddresearch">Knowledge Discovery in Databases (KDD) Lab</a> at Kansas State University.</i>
 </p>
-````[cite: 5]
